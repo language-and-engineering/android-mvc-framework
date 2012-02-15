@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 注意：フレームワーク側でテンプレートとして使うファイル。書き換えないこと。 -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<com.android_mvc.framework.ui.view.MLinearLayout
+    android:id="@+id/_FWRootLayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <!-- ここに，UIBuilderでViewが構築される。 -->
+
+
+</com.android_mvc.framework.ui.view.MLinearLayout>
+</ScrollView>
