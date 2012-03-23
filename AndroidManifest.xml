@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.android_mvc.sample_project"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application android:icon="@drawable/icon"
+                 android:label="@string/app_name"
+                 android:theme="@android:style/Theme.Light"
+    >
+
+        <!-- アプリ初期化  -->
+        <activity android:name=".activities.installation.InstallAppActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- アプリ初期化完了  -->
+        <activity android:name=".activities.installation.InstallCompletedActivity"
+                  android:label="@string/app_name">
+        </activity>
+
+
+        <!-- トップ  -->
+        <activity android:name=".activities.main.TopActivity"
+                  android:label="@string/app_name">
+        </activity>
+
+
+        <!-- DB登録  -->
+        <activity android:name=".activities.func_db.DBEditActivity"
+                  android:label="@string/app_name">
+        </activity>
+
+
+        <!-- DB参照  -->
+        <activity android:name=".activities.func_db.DBListActivity"
+                  android:label="@string/app_name">
+        </activity>
+
+
+        <!-- タブのサンプル  -->
+        <activity android:name=".activities.func_db.SampleTabHostActivity"
+                  android:label="@string/app_name">
+        </activity>
+
+
+        <!-- HTTP通信  -->
+        <activity android:name=".activities.func_net.HttpNetActivity"
+                  android:label="@string/app_name">
+        </activity>
+
+
+    </application>
+
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+</manifest>
