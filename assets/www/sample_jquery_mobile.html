@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" contetnt="width=device-width, initial-scale=1">
+  <title>jQuery Moblie test</title>
+  <link rel="stylesheet" href="./css/jquery.mobile-1.1.1.min.css" />
+  <script src="./js/jquery-1.7.2.min.js"></script>
+  <script src="./js/jquery.mobile-1.1.1.min.js"></script>
+</head>
+<body>
+
+
+<div id="one" data-role="page" data-url="one" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 264px;">
+
+	<div data-role="header" class="ui-header ui-bar-a" role="banner">
+		<h1 class="ui-title" role="heading" aria-level="1">Multi-page</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" class="ui-content" role="main">	
+		<h2>Page One</h2>
+		
+		<p><a data-role="button" href="#two" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Show page "two"</span></span></a></p>	
+		<p><a data-transition="pop" data-rel="dialog" data-role="button" href="#popup" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Show page "popup" (as a dialog)</span></span></a></p>
+	</div><!-- /content -->
+	
+	<div data-theme="d" data-role="footer" class="ui-footer ui-bar-d" role="contentinfo">
+		<h4 class="ui-title" role="heading" aria-level="1">Page Footer</h4>
+	</div><!-- /footer -->
+</div>
+
+
+<div data-theme="a" id="two" data-role="page" data-url="two" tabindex="0" class="ui-page ui-body-a" style="min-height: 264px;">
+
+	<div data-role="header" class="ui-header ui-bar-a" role="banner">
+		<h1 class="ui-title" role="heading" aria-level="1">Two</h1>
+	</div><!-- /header -->
+
+	<div data-theme="a" data-role="content" class="ui-content ui-body-a" role="main">	
+		<h2>Page Two</h2>
+		<p><a data-theme="b" data-role="button" data-direction="reverse" href="#one" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-b"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Back to page "one"</span></span></a></p>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" class="ui-footer ui-bar-a" role="contentinfo">
+		<h4 class="ui-title" role="heading" aria-level="1">Page Footer</h4>
+	</div><!-- /footer -->
+</div>
+
+
+<div id="popup" data-role="dialog" data-url="popup" tabindex="0" class="ui-page ui-body-c ui-dialog ui-overlay-a" style="min-height: 264px;"><div role="dialog" class="ui-dialog-contain ui-corner-all ui-overlay-shadow">
+
+	<div data-theme="e" data-role="header" class="ui-corner-top ui-header ui-bar-e" role="banner"><a data-iconpos="notext" data-icon="delete" href="#" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="e" title="Close" data-transition="none" data-direction="reverse"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Close</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a>
+		<h1 class="ui-title" role="heading" aria-level="1">Dialog</h1>
+	</div><!-- /header -->
+
+	<div data-theme="d" data-role="content" class="ui-content ui-body-d" role="main">	
+		<h2>Popup</h2>
+		<p><a data-icon="back" data-inline="true" data-role="button" data-rel="back" href="#one" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="d" class="ui-btn ui-btn-up-d ui-btn-inline ui-shadow ui-btn-corner-all ui-btn-icon-left"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Back to page "one"</span><span class="ui-icon ui-icon-back ui-icon-shadow">&nbsp;</span></span></a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" class="ui-corner-bottom ui-footer ui-bar-a" role="contentinfo">
+		<h4 class="ui-title" role="heading" aria-level="1">Page Footer</h4>
+	</div><!-- /footer -->
+</div></div>
+
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div>
+
+
+</body>

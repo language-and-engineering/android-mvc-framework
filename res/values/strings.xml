@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Android-MVC !</string>
+    <string name="app_name">Android-MVC Sample</string>
+
+
+	<!-- ■■フレームワークで使用する文字列リソース ここから■■ -->
+
+    <!-- Logのタグ名 -->
+    <string name="tag_for_logging">android-mvc-sample</string>
+
+    <!-- RDBの物理名 -->
+    <string name="rdb_physical_name">android_mvc_sample</string>
+
+    <!-- GoogleMap API Key -->
+    <string name="google_map_api_key">※ご自分のAPI Keyに置き換えてください。</string>
+
+	<!-- ■■フレームワークで使用する文字列リソース ここまで■■ -->
+
+
+</resources>

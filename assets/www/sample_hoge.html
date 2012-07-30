@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WebViewのテスト</title>
+</head>
+<body>
+
+
+<h1>WebViewのテスト</h1>
+
+
+<h2>JavaScriptからJava側のメソッドを呼び出す（１）</h2>
+
+
+入力欄：<input type="text"
+	size="20"
+	id="text1"
+><br>
+
+
+<input type="button"
+	value="上記の文字列をログに出力する"
+	onclick="f1()"
+>
+
+
+<script>
+
+function f1()
+{
+	var text1 = document.getElementById("text1");
+
+	var str = text1.value;
+
+	// Java側のメソッドを呼び出して，値を渡す
+	droid.x( str );
+}
+
+</script>
+
+
+<h2>JavaScriptからJava側のメソッドを呼び出す（２）</h2>
+
+<input type="button"
+	value="Java側からStringを受け取って表示"
+	onclick="f2()"
+><br>
+
+<span id="text2">ここに表示されます。</span>
+
+<script>
+
+function f2()
+{
+	// Java側のメソッドを呼び出して，返り値を表示
+	var str = droid.y();
+
+	var text2 = document.getElementById("text2");
+	text2.innerHTML = str;
+
+	// ※alertは利用不可能
+}
+
+</script>
+
+
+
+<!-- スタイルシートによるレイアウト・デザインも利用可能 -->
+<style>
+body {
+	background-color : #FFE4B5;
+	padding : 1em;
+	/* CSS中では長さの単位にdipを使えない */
+}
+
+</style>
+
+
+</body>
+</html>
