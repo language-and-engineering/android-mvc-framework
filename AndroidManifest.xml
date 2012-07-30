@@ -3,16 +3,28 @@
       package="com.android_mvc.sample_project"
       android:versionCode="1"
       android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="10" />
 
+
+    <!-- SDKのバージョン -->
+    <uses-sdk android:minSdkVersion="10" />
+        <!--
+            Platform Version（OSのバージョン）とAPI Level（SDKのバージョン番号）の対応一覧表：
+            http://developer.android.com/intl/ja/guide/topics/manifest/uses-sdk-element.html#ApiLevels
+        -->
+
+
+    <!-- アプリの構成要素 -->
     <application android:icon="@drawable/icon"
                  android:label="@string/app_name"
                  android:theme="@android:style/Theme.Light"
     >
 
+
+        <!-- ============ 画面 ============= -->
+
+
         <!-- アプリ初期化  -->
-        <activity android:name=".activities.installation.InstallAppActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".activities.installation.InstallAppActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -21,44 +33,97 @@
 
 
         <!-- アプリ初期化完了  -->
-        <activity android:name=".activities.installation.InstallCompletedActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".activities.installation.InstallCompletedActivity">
         </activity>
+
 
 
         <!-- トップ  -->
-        <activity android:name=".activities.main.TopActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".activities.main.TopActivity">
         </activity>
 
 
+
         <!-- DB登録  -->
-        <activity android:name=".activities.func_db.DBEditActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".activities.func_db.DBEditActivity">
         </activity>
 
 
         <!-- DB参照  -->
-        <activity android:name=".activities.func_db.DBListActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".activities.func_db.DBListActivity">
         </activity>
 
 
+
         <!-- タブのサンプル  -->
-        <activity android:name=".activities.func_db.SampleTabHostActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".activities.func_db.SampleTabHostActivity">
         </activity>
 
 
         <!-- HTTP通信  -->
-        <activity android:name=".activities.func_net.HttpNetActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".activities.func_net.HttpNetActivity">
         </activity>
+
+
+        <!-- マップ  -->
+        <activity android:name=".activities.func_map.SampleMapActivity">
+        </activity>
+
+
+
+        <!-- HTMLで画面描画 -->
+        <activity android:name=".activities.func_html.SampleHtmlActivity">
+        </activity>
+
+
+        <!-- jQuery Mobileによる画面描画 -->
+        <activity android:name=".activities.func_html.SampleJQueryMobileActivity">
+        </activity>
+
+
+
+        <!-- アニメーションのサンプル -->
+        <activity android:name=".activities.func_visual.SampleAnimationActivity">
+        </activity>
+
+
+
+        <!-- ============ バッチ ============= -->
+
+
+        <!-- 端末起動時にバッチを呼ぶレシーバ -->
+        <receiver android:name=".bat.OnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+
+
+        <!-- サンプルのサービス -->
+        <service android:name=".bat.SamplePeriodicService"
+        ></service>
+
+
+        <!-- ============ 外部ライブラリ ============= -->
+
+
+        <!-- GoogleMapsを使用 -->
+        <uses-library android:name="com.google.android.maps" />
 
 
     </application>
 
 
+
+    <!-- ============ パーミッション ============= -->
+
+
+    <!-- ネットワークアクセス -->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <!-- アプリケーションがGPSへアクセスするのを許可 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- アプリケーションがテスト用の位置情報にアクセスするのを許可 -->
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 
 </manifest>
